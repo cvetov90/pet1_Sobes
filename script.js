@@ -1,35 +1,5 @@
-// Данные
-
-const defaultAnswer = "Ответ ещё не получен... Требуется получить информацию";
-
-const faq = [
-  {
-    chapterTitle: "chapterTitle_Test_1",
-    chapterQuestions: [
-      {
-        question: "question_1",
-        answer: defaultAnswer,
-      },
-      {
-        question: "question_2",
-        answer: defaultAnswer,
-      },
-    ],
-  },
-  {
-    chapterTitle: "chapterTitle_Test_2",
-    chapterQuestions: [
-      {
-        question: "question_3",
-        answer: defaultAnswer,
-      },
-      {
-        question: "question_4",
-        answer: defaultAnswer,
-      },
-    ],
-  },
-];
+//Импорты
+import {faqData} from './faqData.js'
 
 // Код
 
@@ -39,7 +9,7 @@ let app = document.getElementById("app");
 {
 let content = document.createElement("div");
 
-for (let item of faq) {
+for (let item of faqData) {
   let chapter = document.createElement("div");
   let chapterTitle = document.createElement("div");
   let chapterQuestions = document.createElement("div");
@@ -62,6 +32,8 @@ for (let item of faq) {
   chapter.append(chapterQuestions);
   content.append(chapter);
 }
+
+content.className = 'content'
 
 app.append(content);
 }
