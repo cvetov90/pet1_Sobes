@@ -5,9 +5,23 @@ import {faqData} from './faqData.js'
 
 let app = document.getElementById("app");
 
+// Вывод шапки
+let header = document.createElement('header')
+header.innerText = 'header'
+app.append(header)
+// Конец кода для вывода шапки
+
+// Вывод меню
+let menu = document.createElement('div')
+menu.className = 'menu'
+menu.innerText = 'menu'
+app.append(menu)
+// Конец кода для вывода меню
+
 // Вывод контента (вопросов и ответов)
 {
 let content = document.createElement("div");
+content.className = 'content'
 
 for (let item of faqData) {
   let chapter = document.createElement("div");
@@ -33,8 +47,12 @@ for (let item of faqData) {
   content.append(chapter);
 }
 
-content.className = 'content'
-
 app.append(content);
 }
 // Конец кода для вывода контента
+
+// Вывод подвала
+let footer = document.createElement('footer')
+footer.innerText = 'footer'
+app.append(footer)
+// Конец кода для вывода подвала
